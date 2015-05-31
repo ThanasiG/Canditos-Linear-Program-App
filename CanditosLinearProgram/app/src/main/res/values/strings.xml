@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Candito\'s Linear Program</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="tab_fragment_1">Tab Fragment 1</string>
+    <string name="tab_fragment_2">Tab Fragment 2</string>
+    <string name="tab_fragment_3">Tab Fragment 3</string>
+    <string name="tab_fragment_4">Tab Fragment 4</string>
+    <string name="title_activity_sample1">Sample1Activity</string>
+</resources>
