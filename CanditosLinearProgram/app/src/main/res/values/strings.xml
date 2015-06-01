@@ -8,4 +8,5 @@
     <string name="tab_fragment_3">Tab Fragment 3</string>
     <string name="tab_fragment_4">Tab Fragment 4</string>
     <string name="title_activity_sample1">Sample1Activity</string>
+    <string name="title_activity_calendar">CalendarActivity</string>
 </resources>

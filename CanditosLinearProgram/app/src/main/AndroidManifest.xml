@@ -17,8 +17,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Sample1Activity"
-            android:label="@string/title_activity_sample1" >
+            android:theme="@style/Base.Theme.AppCompat.Dialog"
+            android:name=".CalendarActivity"
+            android:label="@string/title_activity_calendar" >
         </activity>
     </application>
 
