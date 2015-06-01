@@ -18,7 +18,6 @@ public class CalendarActivity extends ActionBarActivity {
 
         initializeCalendar();
     }
-
     public void initializeCalendar() {
         calendar = (CalendarView) findViewById(R.id.calendarView);
 
@@ -50,6 +49,8 @@ public class CalendarActivity extends ActionBarActivity {
             }
         });
     }
+
+
 
 
     @Override
