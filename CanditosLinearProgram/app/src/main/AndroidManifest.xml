@@ -17,9 +17,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:theme="@style/Base.Theme.AppCompat.Dialog"
-            android:name=".CalendarActivity"
-            android:label="@string/title_activity_calendar" >
+            android:name=".StopWatchActivity"
+            android:label="@string/title_activity_calendar"
+            android:theme="@style/Base.Theme.AppCompat.Dialog" >
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" >
         </activity>
     </application>
 

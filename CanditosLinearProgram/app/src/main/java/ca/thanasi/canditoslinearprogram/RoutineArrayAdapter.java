@@ -1,10 +1,12 @@
 package ca.thanasi.canditoslinearprogram;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -38,10 +40,8 @@ public class RoutineArrayAdapter extends ArrayAdapter {
         tvReps.setText(mItems.get(position).mReps + "");
         tvWeight.setText(mItems.get(position).mWeight + "");
 
-        if (mItems.get(position).mWeight == 0) {
-            tvWeight.setVisibility(View.GONE);
-            tvWeightType.setVisibility(View.GONE);
-            tvReps.setText(mItems.get(position).mReps + "-12 Reps");
+        if (mItems.get(position).mName.contains("Optional")) {
+            tvReps.setText(mItems.get(position).mReps + "-12");
         }
         if (mItems.get(position).mWeightType != null) {
             tvWeightType.setText(mItems.get(position).mWeightType.toString().toLowerCase());

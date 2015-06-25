@@ -9,4 +9,13 @@
     <string name="tab_fragment_4">Tab Fragment 4</string>
     <string name="title_activity_sample1">Sample1Activity</string>
     <string name="title_activity_calendar">CalendarActivity</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pref_units_label">Weight Units</string>
+    <string name="pref_units_key">units</string>
+    <string name="pref_units_label_lbs">lbs</string>
+    <string name="pref_units_label_kg">kg</string>
+    <string name="pref_units_lbs">lbs</string>
+    <string name="pref_units_kg">kg</string>
 </resources>

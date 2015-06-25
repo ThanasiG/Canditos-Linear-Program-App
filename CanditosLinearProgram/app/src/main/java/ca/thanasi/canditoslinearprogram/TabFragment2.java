@@ -14,6 +14,7 @@ import java.util.List;
 
 public class TabFragment2 extends Fragment {
     View view;
+    DailyFragment dailyFragment = new DailyFragment();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,12 +26,12 @@ public class TabFragment2 extends Fragment {
 
         tvDay.setText("Heavy Upper Day");
         List<WorkoutType> workouts = new ArrayList<WorkoutType>();
-        workouts.add(new WorkoutType("Bench Press", 3, 6, 165, WeightType.LBS));
-        workouts.add(new WorkoutType("Horizontal Pull", 3, 6, 185, WeightType.LBS));
-        workouts.add(new WorkoutType("Shoulder Press", 1, 6, 60, WeightType.LBS));
-        workouts.add(new WorkoutType("Vertical Pull", 1, 6, 30, WeightType.LBS));
-        workouts.add(new WorkoutType("Optional Exercise", 3, 8, "-12 reps"));
-        workouts.add(new WorkoutType("Optional Exercise", 3, 8, "-12 reps"));
+        workouts.add(new WorkoutType("Bench Press", 3, 6, 165, dailyFragment.formatWeight()));
+        workouts.add(new WorkoutType("Horizontal Pull", 3, 6, 185, dailyFragment.formatWeight()));
+        workouts.add(new WorkoutType("Shoulder Press", 1, 6, 60, dailyFragment.formatWeight()));
+        workouts.add(new WorkoutType("Vertical Pull", 1, 6, 30, dailyFragment.formatWeight()));
+        workouts.add(new WorkoutType("Optional Exercise", 3, 8, "-12", 100, dailyFragment.formatWeight()));
+        workouts.add(new WorkoutType("Optional Exercise", 3, 8, "-12", 100, dailyFragment.formatWeight()));
 
         RoutineArrayAdapter routineArrayAdapter = new RoutineArrayAdapter(getActivity(), 0, workouts);
         lv.setAdapter(routineArrayAdapter);

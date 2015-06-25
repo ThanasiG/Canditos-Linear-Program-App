@@ -4,11 +4,17 @@
     tools:context=".MainActivity">
 
     <item
-        android:id="@+id/action_calendar"
-        android:title="Calendar"
-        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:id="@+id/action_stopwatch"
+        android:title="Stopwatch"
+        android:icon="@android:drawable/ic_menu_recent_history"
         android:orderInCategory="100"
         app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
 
 
 </menu>

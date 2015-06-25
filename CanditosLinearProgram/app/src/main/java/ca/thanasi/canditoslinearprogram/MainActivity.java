@@ -1,40 +1,64 @@
 package ca.thanasi.canditoslinearprogram;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 
-import java.util.Calendar;
+import it.neokree.materialtabs.MaterialTab;
+import it.neokree.materialtabs.MaterialTabHost;
+import it.neokree.materialtabs.MaterialTabListener;
 
-import ca.thanasi.canditoslinearprogram.slidetabs.SlidingTabLayout;
+public class MainActivity extends ActionBarActivity implements MaterialTabListener {
 
-public class MainActivity extends ActionBarActivity {
+    private Toolbar toolbar;
+    private ViewPager mPager;
+    private MaterialTabHost mTabs;
+    private Activity context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Layout manager that allows the user to flip through the pages
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        mPager = (ViewPager) findViewById(R.id.viewpager);
+        mTabs = (MaterialTabHost) findViewById(R.id.materialTabHost);
 
-        // getSupportFragmentManager allows use to interact with the fragments
-        // MyFragmentPagerAdapter will return a fragment based on an index that is passed
-        viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(),
-                MainActivity.this));
+        //Toolbar
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setLogo(R.mipmap.ic_launcher);
+        toolbar.setTitle(" Linear Training");
+        setSupportActionBar(toolbar);
+        if (Build.VERSION.SDK_INT >= 21) {// Could also use Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.rgb(0, 123, 164));
 
-        // Initialize the Sliding Tab Layout
-        SlidingTabLayout slidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
-
-        // Connect the viewPager with the sliding tab layout
-        slidingTabLayout.setViewPager(viewPager);
-
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+            toolbar.setElevation(10.00f);
+            mTabs.setElevation(10.00f);
+        }
+        MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), MainActivity.this);
+        mPager.setAdapter(adapter);
+        mPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+            @Override
+            public void onPageSelected(int position) {
+                mTabs.setSelectedNavigationItem(position);
+            }
+        });
+        for (int i = 0; i < adapter.getCount(); i++) {
+            mTabs.addTab(mTabs.newTab().setText(adapter.getPageTitle(i)).setTabListener(this));
+        }
 
     }
 
@@ -45,9 +69,13 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
+        if (id == R.id.action_settings) {
+            startActivity(new Intent(this, SettingsActivity.class));
+            return true;
+        }
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_calendar) {
-            Intent intent = new Intent(MainActivity.this, CalendarActivity.class);
+        if (id == R.id.action_stopwatch) {
+            Intent intent = new Intent(MainActivity.this, StopWatchActivity.class);
             startActivity(intent);
             return true;
         }
@@ -61,4 +89,20 @@ public class MainActivity extends ActionBarActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
+    @Override
+    public void onTabSelected(MaterialTab materialTab) {
+        mPager.setCurrentItem(materialTab.getPosition());
+    }
+
+    @Override
+    public void onTabReselected(MaterialTab materialTab) {
+
+    }
+
+    @Override
+    public void onTabUnselected(MaterialTab materialTab) {
+
+    }
+
 }

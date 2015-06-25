@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:padding="5dp"
-        android:layout_marginLeft="8dp" />
+        android:layout_marginLeft="4dp" />
 
     <TextView
         android:id="@+id/textSets"
@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:padding="5dp"
-        android:layout_marginLeft="200dp" />
+        android:layout_marginLeft="150dp" />
 
     <TextView
         android:id="@+id/textReps"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:padding="5dp"
-        android:layout_marginLeft="225dp" />
+        android:layout_marginLeft="175dp" />
 
     <TextView
         android:id="@+id/textWeight"
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:padding="5dp"
-        android:layout_marginLeft="300dp" />
+        android:layout_marginLeft="245dp" />
 
     <TextView
         android:id="@+id/textWeightType"
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:padding="5dp"
-        android:layout_marginLeft="330dp" />
+        android:layout_marginLeft="275dp" />
 
 
 </RelativeLayout>
