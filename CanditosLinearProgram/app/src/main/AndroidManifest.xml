@@ -18,8 +18,13 @@
         </activity>
         <activity
             android:name=".StopWatchActivity"
-            android:label="@string/title_activity_calendar"
+            android:label="@string/title_activity_stopwatch"
             android:theme="@style/Base.Theme.AppCompat.Dialog" >
+        </activity>
+        <activity
+            android:name=".CalendarActivity"
+            android:label="@string/title_activity_calendar"
+            android:theme="@style/AppTheme" >
         </activity>
         <activity
             android:name=".SettingsActivity"

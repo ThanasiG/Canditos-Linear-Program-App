@@ -18,4 +18,5 @@
     <string name="pref_units_label_kg">kg</string>
     <string name="pref_units_lbs">lbs</string>
     <string name="pref_units_kg">kg</string>
+    <string name="title_activity_stopwatch">StopWatch</string>
 </resources>

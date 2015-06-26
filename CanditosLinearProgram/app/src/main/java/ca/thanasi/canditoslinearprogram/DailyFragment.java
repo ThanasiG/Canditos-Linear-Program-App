@@ -24,9 +24,9 @@ public class DailyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.tab_fragment, container, false);
-        final TextView tvDay = ((TextView) view.findViewById(R.id.tvDay));
+        TextView tvDay = ((TextView) view.findViewById(R.id.tvDay));
 
-        final ListView lv = (ListView) view.findViewById(R.id.main_list);
+        ListView lv = (ListView) view.findViewById(R.id.main_list);
 
         tvDay.setText("Heavy Lower Day");
         List<WorkoutType> workouts = new ArrayList<WorkoutType>();
@@ -34,7 +34,6 @@ public class DailyFragment extends Fragment {
         workouts.add(new WorkoutType("Deadlift", 2, 6, 185, formatWeight()));
         workouts.add(new WorkoutType("Optional Exercise", 3, 8, 100, formatWeight()));
         workouts.add(new WorkoutType("Optional Exercise", 3, 8, 100, formatWeight()));
-
         RoutineArrayAdapter routineArrayAdapter = new RoutineArrayAdapter(getActivity(), 0, workouts);
         lv.setAdapter(routineArrayAdapter);
 
@@ -50,53 +49,16 @@ public class DailyFragment extends Fragment {
                     i = 0;
                 }
                 if (i == 0) {
-                    tvDay.setText("Heavy Lower Day");
-                    List<WorkoutType> workouts = new ArrayList<WorkoutType>();
-                    workouts.add(new WorkoutType("Squat", 3, 6, 230, formatWeight()));
-                    workouts.add(new WorkoutType("Deadlift", 2, 6, 185, formatWeight()));
-                    workouts.add(new WorkoutType("Optional Exercise", 3, 8, 100, formatWeight()));
-                    workouts.add(new WorkoutType("Optional Exercise", 3, 8, 100, formatWeight()));
-                    RoutineArrayAdapter routineArrayAdapter = new RoutineArrayAdapter(getActivity(), 0, workouts);
-                    lv.setAdapter(routineArrayAdapter);
+                    workoutOne();
                 }
-
                 if (i == 1) {
-                    tvDay.setText("Heavy Upper Day");
-                    List<WorkoutType> workouts2 = new ArrayList<WorkoutType>();
-                    workouts2.add(new WorkoutType("Bench Press", 3, 6, 165, formatWeight()));
-                    workouts2.add(new WorkoutType("Horizontal Pull", 3, 6, 185, formatWeight()));
-                    workouts2.add(new WorkoutType("Shoulder Press", 1, 6, 60, formatWeight()));
-                    workouts2.add(new WorkoutType("Vertical Pull", 1, 6, 30, formatWeight()));
-                    workouts2.add(new WorkoutType("Optional Exercise", 3, 8, "-12", 100, formatWeight()));
-                    workouts2.add(new WorkoutType("Optional Exercise", 3, 8, "-12", 100, formatWeight()));
-                    RoutineArrayAdapter routineArrayAdapter = new RoutineArrayAdapter(getActivity(), 0, workouts2);
-                    lv.setAdapter(routineArrayAdapter);
-
+                    workoutTwo();
                 }
                 if (i == 2) {
-                    tvDay.setText("Hypertrophy Lower Day");
-                    List<WorkoutType> workouts3 = new ArrayList<WorkoutType>();
-                    workouts3.add(new WorkoutType("Squat", 5, 8, 185, formatWeight()));
-                    workouts3.add(new WorkoutType("Deadlift Variation", 3, 8, 185, formatWeight()));
-                    workouts3.add(new WorkoutType("Hamstring Curl", 3, 12, 140, formatWeight()));
-                    workouts3.add(new WorkoutType("Calf Raise", 5, 15, 140, formatWeight()));
-                    workouts3.add(new WorkoutType("Optional Exercise", 4, 8, "-12", 100, formatWeight()));
-                    workouts3.add(new WorkoutType("Optional Exercise", 4, 8, "-12", 100, formatWeight()));
-                    RoutineArrayAdapter routineArrayAdapter = new RoutineArrayAdapter(getActivity(), 0, workouts3);
-                    lv.setAdapter(routineArrayAdapter);
+                    workoutThree();
                 }
                 if (i == 3) {
-                    tvDay.setText("Hypertrophy Upper Day");
-                    List<WorkoutType> workouts4 = new ArrayList<WorkoutType>();
-                    workouts4.add(new WorkoutType("Bench Press", 4, 8, 155, formatWeight()));
-                    workouts4.add(new WorkoutType("Incline Bench Press", 4, 8, 60, formatWeight()));
-                    workouts4.add(new WorkoutType("Horizontal Pull", 4, 8, 170, formatWeight()));
-                    workouts4.add(new WorkoutType("Vertical Pull", 4, 8, 140, formatWeight()));
-                    workouts4.add(new WorkoutType("Shoulder Press", 3, 10, 140, formatWeight()));
-                    workouts4.add(new WorkoutType("Optional Exercise", 4, 8, "-12", 100, formatWeight()));
-                    workouts4.add(new WorkoutType("Optional Exercise", 4, 8, "-12", 100, formatWeight()));
-                    RoutineArrayAdapter routineArrayAdapter = new RoutineArrayAdapter(getActivity(), 0, workouts4);
-                    lv.setAdapter(routineArrayAdapter);
+                    workoutFour();
                 }
 
             }
@@ -109,58 +71,84 @@ public class DailyFragment extends Fragment {
                     i = 3;
                 }
                 if (i == 0) {
-                    tvDay.setText("Heavy Lower Day");
-                    List<WorkoutType> workouts = new ArrayList<WorkoutType>();
-                    workouts.add(new WorkoutType("Squat", 3, 6, 230, formatWeight()));
-                    workouts.add(new WorkoutType("Deadlift", 2, 6, 185, formatWeight()));
-                    workouts.add(new WorkoutType("Optional Exercise", 3, 8, 100, formatWeight()));
-                    workouts.add(new WorkoutType("Optional Exercise", 3, 8, 100, formatWeight()));
-                    RoutineArrayAdapter routineArrayAdapter = new RoutineArrayAdapter(getActivity(), 0, workouts);
-                    lv.setAdapter(routineArrayAdapter);
+                    workoutOne();
                 }
-
                 if (i == 1) {
-                    tvDay.setText("Heavy Upper Day");
-                    List<WorkoutType> workouts2 = new ArrayList<WorkoutType>();
-                    workouts2.add(new WorkoutType("Bench Press", 3, 6, 165, formatWeight()));
-                    workouts2.add(new WorkoutType("Horizontal Pull", 3, 6, 185, formatWeight()));
-                    workouts2.add(new WorkoutType("Shoulder Press", 1, 6, 60, formatWeight()));
-                    workouts2.add(new WorkoutType("Vertical Pull", 1, 6, 30, formatWeight()));
-                    workouts2.add(new WorkoutType("Optional Exercise", 3, 8, "-12", 100, formatWeight()));
-                    workouts2.add(new WorkoutType("Optional Exercise", 3, 8, "-12", 100, formatWeight()));
-                    RoutineArrayAdapter routineArrayAdapter = new RoutineArrayAdapter(getActivity(), 0, workouts2);
-                    lv.setAdapter(routineArrayAdapter);
-
+                    workoutTwo();
                 }
                 if (i == 2) {
-                    tvDay.setText("Hypertrophy Lower Day");
-                    List<WorkoutType> workouts3 = new ArrayList<WorkoutType>();
-                    workouts3.add(new WorkoutType("Squat", 5, 8, 185, formatWeight()));
-                    workouts3.add(new WorkoutType("Deadlift Variation", 3, 8, 185, formatWeight()));
-                    workouts3.add(new WorkoutType("Hamstring Curl", 3, 12, 140, formatWeight()));
-                    workouts3.add(new WorkoutType("Calf Raise", 5, 15, 140, formatWeight()));
-                    workouts3.add(new WorkoutType("Optional Exercise", 4, 8, "-12", 100, formatWeight()));
-                    workouts3.add(new WorkoutType("Optional Exercise", 4, 8, "-12", 100, formatWeight()));
-                    RoutineArrayAdapter routineArrayAdapter = new RoutineArrayAdapter(getActivity(), 0, workouts3);
-                    lv.setAdapter(routineArrayAdapter);
+                    workoutThree();
                 }
                 if (i == 3) {
-                    tvDay.setText("Hypertrophy Upper Day");
-                    List<WorkoutType> workouts4 = new ArrayList<WorkoutType>();
-                    workouts4.add(new WorkoutType("Bench Press", 4, 8, 155, formatWeight()));
-                    workouts4.add(new WorkoutType("Incline Bench Press", 4, 8, 60, formatWeight()));
-                    workouts4.add(new WorkoutType("Horizontal Pull", 4, 8, 170, formatWeight()));
-                    workouts4.add(new WorkoutType("Vertical Pull", 4, 8, 140, formatWeight()));
-                    workouts4.add(new WorkoutType("Shoulder Press", 3, 10, 140, formatWeight()));
-                    workouts4.add(new WorkoutType("Optional Exercise", 4, 8, "-12", 100, formatWeight()));
-                    workouts4.add(new WorkoutType("Optional Exercise", 4, 8, "-12", 100, formatWeight()));
-                    RoutineArrayAdapter routineArrayAdapter = new RoutineArrayAdapter(getActivity(), 0, workouts4);
-                    lv.setAdapter(routineArrayAdapter);
+                    workoutFour();
                 }
             }
         });
 
         return view;
+    }
+
+    public void workoutOne() {
+        ListView lv = (ListView) view.findViewById(R.id.main_list);
+        TextView tvDay = ((TextView) view.findViewById(R.id.tvDay));
+        tvDay.setText("Heavy Lower Day");
+        List<WorkoutType> workouts = new ArrayList<WorkoutType>();
+        workouts.add(new WorkoutType("Squat", 3, 6, 230, formatWeight()));
+        workouts.add(new WorkoutType("Deadlift", 2, 6, 185, formatWeight()));
+        workouts.add(new WorkoutType("Optional Exercise", 3, 8, 100, formatWeight()));
+        workouts.add(new WorkoutType("Optional Exercise", 3, 8, 100, formatWeight()));
+        RoutineArrayAdapter routineArrayAdapter = new RoutineArrayAdapter(getActivity(), 0, workouts);
+        lv.setAdapter(routineArrayAdapter);
+
+    }
+
+    public void workoutTwo() {
+        ListView lv = (ListView) view.findViewById(R.id.main_list);
+        TextView tvDay = ((TextView) view.findViewById(R.id.tvDay));
+        tvDay.setText("Heavy Upper Day");
+        List<WorkoutType> workouts2 = new ArrayList<WorkoutType>();
+        workouts2.add(new WorkoutType("Bench Press", 3, 6, 165, formatWeight()));
+        workouts2.add(new WorkoutType("Horizontal Pull", 3, 6, 185, formatWeight()));
+        workouts2.add(new WorkoutType("Shoulder Press", 1, 6, 60, formatWeight()));
+        workouts2.add(new WorkoutType("Vertical Pull", 1, 6, 30, formatWeight()));
+        workouts2.add(new WorkoutType("Optional Exercise", 3, 8, "-12", 100, formatWeight()));
+        workouts2.add(new WorkoutType("Optional Exercise", 3, 8, "-12", 100, formatWeight()));
+        RoutineArrayAdapter routineArrayAdapter = new RoutineArrayAdapter(getActivity(), 0, workouts2);
+        lv.setAdapter(routineArrayAdapter);
+
+    }
+
+    public void workoutThree() {
+        ListView lv = (ListView) view.findViewById(R.id.main_list);
+        TextView tvDay = ((TextView) view.findViewById(R.id.tvDay));
+        tvDay.setText("Hypertrophy Lower Day");
+        List<WorkoutType> workouts3 = new ArrayList<WorkoutType>();
+        workouts3.add(new WorkoutType("Squat", 5, 8, 185, formatWeight()));
+        workouts3.add(new WorkoutType("Deadlift Variation", 3, 8, 185, formatWeight()));
+        workouts3.add(new WorkoutType("Hamstring Curl", 3, 12, 140, formatWeight()));
+        workouts3.add(new WorkoutType("Calf Raise", 5, 15, 140, formatWeight()));
+        workouts3.add(new WorkoutType("Optional Exercise", 4, 8, "-12", 100, formatWeight()));
+        workouts3.add(new WorkoutType("Optional Exercise", 4, 8, "-12", 100, formatWeight()));
+        RoutineArrayAdapter routineArrayAdapter = new RoutineArrayAdapter(getActivity(), 0, workouts3);
+        lv.setAdapter(routineArrayAdapter);
+
+    }
+
+    public void workoutFour() {
+        ListView lv = (ListView) view.findViewById(R.id.main_list);
+        TextView tvDay = ((TextView) view.findViewById(R.id.tvDay));
+        tvDay.setText("Hypertrophy Upper Day");
+        List<WorkoutType> workouts4 = new ArrayList<WorkoutType>();
+        workouts4.add(new WorkoutType("Bench Press", 4, 8, 155, formatWeight()));
+        workouts4.add(new WorkoutType("Incline Bench Press", 4, 8, 60, formatWeight()));
+        workouts4.add(new WorkoutType("Horizontal Pull", 4, 8, 170, formatWeight()));
+        workouts4.add(new WorkoutType("Vertical Pull", 4, 8, 140, formatWeight()));
+        workouts4.add(new WorkoutType("Shoulder Press", 3, 10, 140, formatWeight()));
+        workouts4.add(new WorkoutType("Optional Exercise", 4, 8, "-12", 100, formatWeight()));
+        workouts4.add(new WorkoutType("Optional Exercise", 4, 8, "-12", 100, formatWeight()));
+        RoutineArrayAdapter routineArrayAdapter = new RoutineArrayAdapter(getActivity(), 0, workouts4);
+        lv.setAdapter(routineArrayAdapter);
+
     }
 
     public String formatWeight() {
