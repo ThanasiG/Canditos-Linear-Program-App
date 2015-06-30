@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class DailyRoutinePagerAdapter extends FragmentPagerAdapter {
 
     // Holds tab titles
-    private String tabTitles[] = new String[]{"Monday", "Tuesday", "Thursday", "Friday"};
+    //private String tabTitles[] = new String[]{"Monday", "Tuesday", "Thursday", "Friday"};
     private Context context;
 
     public DailyRoutinePagerAdapter(FragmentManager fm, Context context) {
@@ -24,7 +24,7 @@ public class DailyRoutinePagerAdapter extends FragmentPagerAdapter {
     // Return the correct Fragment based on index
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
+        /*if (position == 0) {
             return new TabFragment1();
         } else if (position == 1) {
             return new TabFragment2();
@@ -32,14 +32,14 @@ public class DailyRoutinePagerAdapter extends FragmentPagerAdapter {
             return new TabFragment3();
         } else if (position == 3) {
             return new TabFragment4();
-        }
+        }*/
 
         return null;
     }
 
-    @Override
+   /* @Override
     public CharSequence getPageTitle(int position) {
         // Return the tab title to SlidingTabLayout
         return tabTitles[position];
-    }
+    }*/
 }

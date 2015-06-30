@@ -45,8 +45,8 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(Color.rgb(0, 123, 164));
 
-            toolbar.setElevation(10.00f);
-            mTabs.setElevation(10.00f);
+            toolbar.setElevation(20.00f);
+            mTabs.setElevation(20.00f);
         }
         MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), MainActivity.this);
         mPager.setAdapter(adapter);
@@ -104,5 +104,6 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
     public void onTabUnselected(MaterialTab materialTab) {
 
     }
+
 
 }

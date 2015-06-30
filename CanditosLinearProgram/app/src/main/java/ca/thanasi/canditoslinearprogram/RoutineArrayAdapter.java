@@ -31,17 +31,16 @@ public class RoutineArrayAdapter extends ArrayAdapter {
 
         TextView tvName = ((TextView) rowView.findViewById(R.id.textName));
         TextView tvSets = ((TextView) rowView.findViewById(R.id.textSets));
-        TextView tvReps = ((TextView) rowView.findViewById(R.id.textReps));
+        //TextView tvReps = ((TextView) rowView.findViewById(R.id.textReps));
         TextView tvWeight = ((TextView) rowView.findViewById(R.id.textWeight));
         TextView tvWeightType = ((TextView) rowView.findViewById(R.id.textWeightType));
 
         tvName.setText(mItems.get(position).mName);
-        tvSets.setText(mItems.get(position).mSets + " x");
-        tvReps.setText(mItems.get(position).mReps + "");
+        tvSets.setText(mItems.get(position).mSets + " x " + mItems.get(position).mReps);
         tvWeight.setText(mItems.get(position).mWeight + "");
 
         if (mItems.get(position).mName.contains("Optional")) {
-            tvReps.setText(mItems.get(position).mReps + "-12");
+            tvSets.append("-12");
         }
         if (mItems.get(position).mWeightType != null) {
             tvWeightType.setText(mItems.get(position).mWeightType.toString().toLowerCase());

@@ -1,5 +1,7 @@
 package ca.thanasi.canditoslinearprogram;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -47,6 +49,27 @@ public class SettingsActivity extends PreferenceActivity
             preference.setSummary(stringValue);
         }
         return true;
+    }
+
+    public static boolean isLbs(Context context) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        return prefs.getString(context.getString(R.string.pref_units_key),
+                context.getString(R.string.pref_units_lbs))
+                .equals(context.getString(R.string.pref_units_lbs));
+    }
+
+    public static String formatWeight(Context context, int benchHeavy) {
+        // Data stored in Celsius by default.  If user prefers to see in Fahrenheit, convert
+        // the values here.
+        if (!isLbs(context)) {
+            benchHeavy = (int)Math.round(benchHeavy / 2.20462);
+            /*rowHeavy = (int)Math.round(rowHeavy / 2.20462);
+            shoulderHeavy = (int)Math.round(shoulderHeavy / 2.20462);
+            pullupHeavy = (int)Math.round(pullupHeavy / 2.20462);
+            opt1LHeavy = (int)Math.round(opt1LHeavy / 2.20462);
+            opt2LHeavy = (int)Math.round(opt2LHeavy / 2.20462);*/
+        }
+        return String.format(context.getString(benchHeavy));
     }
 
 }

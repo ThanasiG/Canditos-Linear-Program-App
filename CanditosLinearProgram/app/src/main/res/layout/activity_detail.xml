@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.liuguangqiang.swipeback.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeBackLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:theme="@style/ToolbarTheme" />
+
+
+        <com.nirhart.parallaxscroll.views.ParallaxScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:parallax_factor="1.9"
+            tools:context=".MainActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/exercise_diagram"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/bench_press_2"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/instructions_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Instructions"
+                    android:background="@android:color/white"
+                    android:textSize="25sp"
+                    android:padding="10dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/exercise_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/bench_instructions"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Muscles used"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Pectoralis Major"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Pectoralis Minor"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Anterior Deltoids"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Triceps"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Latissimus Dorsi"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Trapezius"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Posterior Deltoids"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Pectoralis Major"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Pectoralis Minor"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Anterior Deltoids"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Triceps"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Latissimus Dorsi"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used13"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Triceps"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/muscles_used14"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Latissimus Dorsi"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    tools:ignore="HardcodedText" />
+
+
+            </LinearLayout>
+
+        </com.nirhart.parallaxscroll.views.ParallaxScrollView>
+    </LinearLayout>
+</com.liuguangqiang.swipeback.SwipeBackLayout>
