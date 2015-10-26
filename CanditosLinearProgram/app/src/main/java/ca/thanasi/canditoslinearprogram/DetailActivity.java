@@ -114,6 +114,10 @@ public class DetailActivity extends SwipeBackActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id == R.id.action_about) {
+            startActivity(new Intent(this, AboutActivity.class));
+            return true;
+        }
         if (id == R.id.home) {
             this.finish();
             return true;

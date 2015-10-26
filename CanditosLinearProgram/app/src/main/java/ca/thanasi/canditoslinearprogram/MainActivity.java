@@ -73,6 +73,10 @@ public class MainActivity extends ActionBarActivity implements MaterialTabListen
             startActivity(new Intent(this, SettingsActivity.class));
             return true;
         }
+        if (id == R.id.action_about) {
+            startActivity(new Intent(this, AboutActivity.class));
+            return true;
+        }
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_stopwatch) {
             Intent intent = new Intent(MainActivity.this, StopWatchActivity.class);

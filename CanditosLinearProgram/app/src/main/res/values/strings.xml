@@ -20,7 +20,9 @@
     <string name="pref_units_kg">kg</string>
     <string name="title_activity_stopwatch">StopWatch</string>
     <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
     <string name="bench_instructions">To perform this movement, lay down flat on a bench under a barbell. Use a rack for your own safety. Begin by retracting your shoulders, keeping your back tight, feet on the floor and grab the barbell with an overhand grip. Unrack the weight, lower the barbell to your chest, once you touch your chest, push the weight back up. This is one rep. Consider using a spotter if you\'re lifting heavy weight.</string>
     <string name="squat_instructions">To perform this movement, place barbell onto your shoulders, behind your neck. Use a rack with guards for your own safety. Begin by retracting your shoulders, keeping your back tight, feet spread approximately shoulder-width apart. Unrack the weight, take a step back to clear the barpath from the rack, descend in a controlled motion downwards until your quadriceps are parallel to the floor, then push the weight back up. This is one rep. Consider using a spotter if you\'re lifting heavy weight.</string>
     <string name="action_youtube">View on YouTube</string>
+    <string name="action_about">About</string>
 </resources>
